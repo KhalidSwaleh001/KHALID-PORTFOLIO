@@ -2,7 +2,8 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
-
+import About from './sections/About'
+import Skills from './sections/Skills'
 import SectionHeading from './components/SectionHeading'
 
 function PlaceholderSection({
@@ -31,20 +32,8 @@ export default function App() {
 
       <main>
         <Hero />
-
-        <PlaceholderSection
-          id="about"
-          label="01 / About"
-          title="A little about me"
-          description="My background, interests and journey in technology."
-        />
-
-        <PlaceholderSection
-          id="skills"
-          label="02 / Skills"
-          title="Technical Skills"
-          description="Technologies, tools and technical competencies."
-        />
+        <About />
+        <Skills />
 
         <PlaceholderSection
           id="labs"
