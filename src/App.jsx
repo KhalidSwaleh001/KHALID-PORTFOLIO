@@ -1,122 +1,95 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Footer from './components/Footer'
 
+import SectionHeading from './components/SectionHeading'
+
+function PlaceholderSection({
+  id,
+  label,
+  title,
+  description
+}) {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <section id={id} className="section">
+      <div className="container">
+        <SectionHeading
+          label={label}
+          title={title}
+          description={description}
+        />
+      </div>
+    </section>
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <>
+      <Navbar />
+
+      <main>
+        <Hero />
+
+        <PlaceholderSection
+          id="about"
+          label="01 / About"
+          title="A little about me"
+          description="My background, interests and journey in technology."
+        />
+
+        <PlaceholderSection
+          id="skills"
+          label="02 / Skills"
+          title="Technical Skills"
+          description="Technologies, tools and technical competencies."
+        />
+
+        <PlaceholderSection
+          id="labs"
+          label="03 / Hands-on Experience"
+          title="Cybersecurity Labs"
+          description="Practical learning through LabEx, TryHackMe, Hack The Box and Pwned Labs."
+        />
+
+        <PlaceholderSection
+          id="projects"
+          label="04 / Portfolio"
+          title="Selected Projects"
+          description="Software applications and technical projects I've worked on."
+        />
+
+        <PlaceholderSection
+          id="certifications"
+          label="05 / Achievements"
+          title="Certifications & Training"
+          description="Professional courses and technical certifications."
+        />
+
+        <PlaceholderSection
+          id="education"
+          label="06 / Education"
+          title="Education"
+          description="Academic background and continuous learning."
+        />
+
+        <PlaceholderSection
+          id="experience"
+          label="07 / Experience"
+          title="Professional Experience"
+          description="Practical experience, placements and responsibilities."
+        />
+
+        <PlaceholderSection
+          id="contact"
+          label="08 / Contact"
+          title="Let's Connect"
+          description="Have an opportunity or project in mind? Let's talk."
+        />
+      </main>
+
+      <Footer />
+    </>
+  )
+}
