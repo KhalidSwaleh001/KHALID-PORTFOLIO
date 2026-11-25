@@ -1,5 +1,5 @@
 
-import { ArrowDown, Download, Github } from 'lucide-react'
+import { ArrowDown, Download, Code2 } from 'lucide-react'
 import { motion } from 'motion/react'
 
 export default function Hero() {
@@ -53,7 +53,7 @@ export default function Hero() {
 
           <div className="hero-social">
             <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <Github size={21} />
+              <Code2 size={21} />
             </a>
           </div>
         </motion.div>
