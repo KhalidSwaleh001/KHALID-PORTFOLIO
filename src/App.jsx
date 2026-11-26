@@ -1,3 +1,4 @@
+import Education from './sections/Education'
 import Labs from './sections/Labs'
 import Certifications from './sections/Certifications'
 import Projects from './sections/Projects'
@@ -43,12 +44,7 @@ export default function App() {
 
         <Certifications />
 
-        <PlaceholderSection
-          id="education"
-          label="06 / Education"
-          title="Education"
-          description="Academic background and continuous learning."
-        />
+         <Education />
 
         <PlaceholderSection
           id="experience"
