@@ -1,4 +1,3 @@
-
 import { ArrowDown, Download, Code2 } from 'lucide-react'
 import { motion } from 'motion/react'
 
