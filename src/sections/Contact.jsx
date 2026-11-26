@@ -5,8 +5,8 @@ import {
   MapPin,
   Send,
   ExternalLink,
+  MessageCircle,
 } from 'lucide-react'
-
 import SectionHeading from '../components/SectionHeading'
 
 function Contact() {
@@ -23,6 +23,12 @@ function Contact() {
       url: 'https://github.com/KhalidSwaleh001',
       icon: GitBranch,
     },
+    {
+  name: 'WhatsApp',
+  value: 'Chat with me directly',
+  url: 'https://wa.me/254111468840',
+  icon: MessageCircle,
+},
   ]
 
   return (
@@ -49,14 +55,16 @@ function Contact() {
               <span>Kenya</span>
             </div>
 
-            <a
-              href="mailto:khalidbreik@gmail.com"
-              className="contact-email-button"
-            >
-              <Mail size={19} />
-              Send Me an Email
-              <Send size={16} />
-            </a>
+           <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=khalidbreik@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="contact-email-button"
+>
+  <Mail size={19} />
+  Email Me Through Gmail
+  <Send size={16} />
+</a>
           </div>
 
           <div className="contact-links">

@@ -448,18 +448,16 @@ img {
   padding: 30px 0;
   background: var(--bg-secondary);
 }
-
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  text-align: center;
+  padding: 25px 15px;
 }
 
-.footer p {
-  color: var(--text-secondary);
-  font-size: 0.82rem;
+.footer-content p {
+  margin: 0;
   text-align: center;
 }
 
