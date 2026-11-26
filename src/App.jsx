@@ -1,3 +1,4 @@
+import Experience from './sections/Experience'
 import Education from './sections/Education'
 import Labs from './sections/Labs'
 import Certifications from './sections/Certifications'
@@ -46,12 +47,7 @@ export default function App() {
 
          <Education />
 
-        <PlaceholderSection
-          id="experience"
-          label="07 / Experience"
-          title="Professional Experience"
-          description="Practical experience, placements and responsibilities."
-        />
+        <Experience />
 
         <PlaceholderSection
           id="contact"

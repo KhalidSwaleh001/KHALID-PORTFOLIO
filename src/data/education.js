@@ -22,8 +22,10 @@ const education = [
     period: '2019 – 2022',
     status: 'Completed',
     description:
-      'Completed secondary school education and attained the Kenya Certificate of Secondary Education.',
-    focusAreas: [],
+      'Completed high school education and attained the Kenya Certificate of Secondary Education.',
+    focusAreas: ['Computer Studies & Computing Fundamentals',
+    'Introduction to Programming and Databases',
+    'Foundation for Computer Science & Cybersecurity'],
   },
 ]
 

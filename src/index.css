@@ -1762,3 +1762,178 @@ img {
     font-size: 1.2rem;
   }
 }
+
+
+/* ==========================================
+   PROFESSIONAL EXPERIENCE SECTION
+========================================== */
+
+.experience-section {
+  padding: 6rem 0;
+}
+
+.experience-list {
+  margin-top: 3rem;
+}
+
+.experience-card {
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.experience-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 14px;
+}
+
+.experience-type {
+  padding: 0.4rem 0.8rem;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.experience-content h3 {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.experience-content h4 {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.experience-meta svg {
+  color: var(--accent);
+}
+
+.experience-description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 1.75rem;
+}
+
+.experience-responsibilities {
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--border);
+}
+
+.experience-responsibilities h5,
+.experience-technologies h5 {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.experience-responsibilities ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-responsibilities li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.experience-responsibilities li svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: var(--accent);
+}
+
+.experience-technologies {
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.experience-tags span {
+  padding: 0.45rem 0.75rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 650px) {
+  .experience-section {
+    padding: 4rem 0;
+  }
+
+  .experience-card {
+    padding: 1.4rem;
+  }
+
+  .experience-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-meta {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
