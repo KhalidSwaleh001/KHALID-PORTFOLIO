@@ -1,7 +1,7 @@
 import {
   Mail,
-  Linkedin,
-  Github,
+  Network,
+  GitBranch,
   MapPin,
   Send,
   ExternalLink,
@@ -15,13 +15,13 @@ function Contact() {
       name: 'LinkedIn',
       value: 'Connect professionally',
       url: 'https://linkedin.com/in/khalid-swaleh-182140292',
-      icon: Linkedin,
+      icon: Network,
     },
     {
       name: 'GitHub',
       value: 'Explore my projects',
       url: 'https://github.com/KhalidSwaleh001',
-      icon: Github,
+      icon: GitBranch,
     },
   ]
 
