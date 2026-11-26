@@ -1,4 +1,5 @@
 import Experience from './sections/Experience'
+import Contact from './sections/Contact'
 import Education from './sections/Education'
 import Labs from './sections/Labs'
 import Certifications from './sections/Certifications'
@@ -49,12 +50,7 @@ export default function App() {
 
         <Experience />
 
-        <PlaceholderSection
-          id="contact"
-          label="08 / Contact"
-          title="Let's Connect"
-          description="Have an opportunity or project in mind? Let's talk."
-        />
+        <Contact />
       </main>
 
       <Footer />
