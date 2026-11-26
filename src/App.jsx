@@ -1,7 +1,7 @@
-
+import Labs from './sections/Labs'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Footer from './components/Footer'
+import Footer from './components/footer'
 import About from './sections/About'
 import Skills from './sections/Skills'
 import SectionHeading from './components/SectionHeading'
@@ -35,12 +35,7 @@ export default function App() {
         <About />
         <Skills />
 
-        <PlaceholderSection
-          id="labs"
-          label="03 / Hands-on Experience"
-          title="Cybersecurity Labs"
-          description="Practical learning through LabEx, TryHackMe, Hack The Box and Pwned Labs."
-        />
+        <Labs />
 
         <PlaceholderSection
           id="projects"
