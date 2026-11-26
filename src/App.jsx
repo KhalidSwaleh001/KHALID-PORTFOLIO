@@ -1,4 +1,6 @@
 import Labs from './sections/Labs'
+import Certifications from './sections/Certifications'
+import Projects from './sections/Projects'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Footer from './components/footer'
@@ -37,19 +39,9 @@ export default function App() {
 
         <Labs />
 
-        <PlaceholderSection
-          id="projects"
-          label="04 / Portfolio"
-          title="Selected Projects"
-          description="Software applications and technical projects I've worked on."
-        />
+        <Projects />
 
-        <PlaceholderSection
-          id="certifications"
-          label="05 / Achievements"
-          title="Certifications & Training"
-          description="Professional courses and technical certifications."
-        />
+        <Certifications />
 
         <PlaceholderSection
           id="education"

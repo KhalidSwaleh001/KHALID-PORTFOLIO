@@ -1,5 +1,12 @@
 
-import { ExternalLink, Github, Globe, Database, BrainCircuit, Code2 } from 'lucide-react'
+import {
+  ExternalLink,
+  Globe,
+  Database,
+  BrainCircuit,
+  Code2,
+  GitBranch,
+} from 'lucide-react'
 import projects from '../data/projects'
 import SectionHeading from '../components/SectionHeading'
 
@@ -101,7 +108,7 @@ function Projects() {
                       rel="noopener noreferrer"
                       className="project-link"
                     >
-                      <Github size={16} />
+                      <GitBranch size={16} />
                       Source Code
                     </a>
                   )}
