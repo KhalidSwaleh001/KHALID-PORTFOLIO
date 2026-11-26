@@ -1,54 +1,58 @@
 
 import { useState } from 'react'
-import { Menu, X, Terminal } from 'lucide-react'
+import { Menu, X, Code2 } from 'lucide-react'
 
-const navigation = [
+const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Labs', href: '#labs' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Certifications', href: '#certifications' },
+  { name: 'Education', href: '#education' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Contact', href: '#contact' },
 ]
 
-export default function Navbar() {
+function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const closeMenu = () => setMenuOpen(false)
 
   return (
     <header className="navbar">
-      <div className="container navbar-content">
+      <div className="container navbar-container">
 
-        <a href="#home" className="logo">
-          <Terminal size={23} />
-          <span>KSB<span className="accent">.</span></span>
+        <a href="#home" className="navbar-logo" onClick={closeMenu}>
+          <Code2 size={25} />
+          <span>KHALID<span className="logo-accent">.</span></span>
         </a>
 
-        <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
-          {navigation.map((item) => (
+        <nav className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+          {navLinks.map((link) => (
             <a
-              key={item.name}
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
+              key={link.name}
+              href={link.href}
+              className="nav-link"
+              onClick={closeMenu}
             >
-              {item.name}
+              {link.name}
             </a>
           ))}
         </nav>
 
-        <a href="#contact" className="nav-contact">
-          Let's Connect
-        </a>
-
         <button
-          className="menu-toggle"
+          className="mobile-menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={menuOpen}
         >
-          {menuOpen ? <X /> : <Menu />}
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
       </div>
     </header>
   )
 }
+
+export default Navbar

@@ -104,81 +104,127 @@ img {
   line-height: 1.8;
   max-width: 650px;
 }
-/* =========================
-   NAVIGATION
-========================= */
+
+/* ==========================================
+   NAVIGATION BAR
+========================================== */
 
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(8, 13, 24, 0.92);
+  width: 100%;
+  background: rgba(8, 13, 24, 0.94);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 
-.navbar-content {
+.navbar-container {
   min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
+  gap: 2rem;
 }
 
-.logo {
-  display: flex;
+.navbar-logo {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.55rem;
   color: var(--text-primary);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 800;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-.logo svg {
+.navbar-logo svg {
   color: var(--accent);
 }
 
-.accent {
+.logo-accent {
   color: var(--accent);
 }
 
-.nav-links {
+.navbar-links {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 1.15rem;
 }
 
-.nav-links a {
+.nav-link {
   color: var(--text-secondary);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-link:hover {
   color: var(--accent);
 }
 
-.nav-contact {
-  padding: 11px 18px;
-  border: 1px solid var(--accent);
-  border-radius: 7px;
-  color: var(--accent);
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: 0.2s;
-}
-
-.nav-contact:hover {
-  background: var(--accent);
-  color: var(--bg-primary);
-}
-
-.menu-toggle {
+.mobile-menu-button {
   display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
   color: var(--text-primary);
   background: transparent;
-  border: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+  .navbar-links {
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .navbar-container {
+    min-height: 68px;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.75rem 1.5rem 1.25rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.85rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
 
 /* =========================
    HERO
@@ -1201,5 +1247,365 @@ img {
 
   .project-description {
     font-size: 0.88rem;
+  }
+}
+
+
+/* ==========================================
+   CERTIFICATIONS & TRAINING
+========================================== */
+
+.certifications-section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.certifications-section .certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+
+/* Certificate card */
+
+.certifications-section .certification-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.certifications-section .certification-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+}
+
+/* Card header */
+
+.certifications-section .certification-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.certifications-section .certification-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 14px;
+}
+
+.certifications-section .certification-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.certifications-section .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+}
+
+/* Certificate details */
+
+.certifications-section .certification-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.certifications-section .certification-category {
+  display: inline-block;
+  width: fit-content;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.08);
+  padding: 0.35rem 0.65rem;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.certifications-section .certification-title {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0 0 0.5rem;
+}
+
+.certifications-section .certification-issuer {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.certifications-section .certification-description {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+}
+
+/* Skills */
+
+.certifications-section .certification-skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: auto;
+}
+
+.certifications-section .certification-skill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 0.73rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/* Certificate action buttons */
+
+.certifications-section .certification-footer {
+  margin-top: 1.6rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.certifications-section .certification-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.certifications-section .certification-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.certifications-section .certification-link:hover {
+  color: #ffffff;
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   CURRENTLY LEARNING
+========================================== */
+
+.certifications-section .ongoing-learning {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.certifications-section .ongoing-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.certifications-section .ongoing-heading-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.12);
+  border-radius: 12px;
+}
+
+.certifications-section .ongoing-heading h3 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.certifications-section .ongoing-heading p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.certifications-section .ongoing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.certifications-section .ongoing-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.25s ease;
+}
+
+.certifications-section .ongoing-card:hover {
+  border-color: var(--accent);
+}
+
+.certifications-section .ongoing-card-icon {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 10px;
+}
+
+.certifications-section .ongoing-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.certifications-section .ongoing-card-content h4 {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.3rem;
+}
+
+.certifications-section .ongoing-card-content p {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.certifications-section .ongoing-status {
+  display: inline-block;
+  padding: 0.4rem 0.65rem;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 850px) {
+  .certifications-section .certifications-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .certifications-section .certification-card {
+    padding: 1.4rem;
+  }
+
+  .certifications-section .ongoing-card {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 650px) {
+  .certifications-section {
+    padding: 4rem 0;
+  }
+
+  .certifications-section .certifications-grid,
+  .certifications-section .ongoing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-section .certification-card {
+    padding: 1.4rem;
+  }
+
+  .certifications-section .ongoing-learning {
+    padding: 1.4rem;
+    margin-top: 3rem;
+  }
+
+  .certifications-section .certification-title {
+    font-size: 1.1rem;
+  }
+
+  .certifications-section .certification-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .certifications-section .certification-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .certifications-section .certification-top {
+    align-items: flex-start;
+  }
+
+  .certifications-section .certification-status {
+    font-size: 0.68rem;
+  }
+
+  .certifications-section .ongoing-card {
+    gap: 0.7rem;
   }
 }
