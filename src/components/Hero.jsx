@@ -43,12 +43,12 @@ export default function Hero() {
             </a>
 
             <a
-              href="/resume.pdf"
-              download="Khalid-Swaleh-CV.pdf"
-              className="btn btn-outline"
-            >
-              Download CV <Download size={18} />
-            </a>
+  href="/images/resume.pdf"
+  download="Khalid-Swaleh-Breik-CV.pdf"
+  className="btn btn-outline"
+>
+  Download CV <Download size={18} />
+</a>
           </div>
 
           <div className="hero-social">
@@ -66,7 +66,7 @@ export default function Hero() {
         >
           <div className="hero-image-frame">
             <img
-              src="/images/profile.jpg"
+              src="/src/assets/images/profile.jpg"
               alt="Khalid Swaleh Breik"
               onError={(e) => {
                 e.currentTarget.style.display = 'none'
@@ -78,9 +78,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="floating-tag">
-            <span className="accent">01.</span> Always Learning
-          </div>
+          
         </motion.div>
 
       </div>

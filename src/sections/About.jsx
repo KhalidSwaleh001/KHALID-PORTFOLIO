@@ -1,5 +1,10 @@
+import {
+  Code2,
+  ShieldCheck,
+  GraduationCap,
+  Lightbulb,
+} from 'lucide-react'
 
-import { Code2, ShieldCheck, GraduationCap, Lightbulb } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
 
 const highlights = [
@@ -38,6 +43,7 @@ export default function About() {
 
         <div className="about-grid">
 
+          {/* About introduction */}
           <div className="about-content">
             <h3>
               I'm Khalid, a technology enthusiast
@@ -77,25 +83,37 @@ export default function About() {
             </a>
           </div>
 
-          <div className="about-highlights">
-            {highlights.map((item) => {
-              const Icon = item.icon
+          {/* Image and highlights */}
+          <div className="about-visual">
 
-              return (
-                <div className="highlight-card" key={item.title}>
-                  <div className="highlight-icon">
-                    <Icon size={23} />
-                  </div>
+            <div className="about-image-wrapper">
+              <img
+                src="/images/handconnection.jpg"
+                alt="Human hand connecting with a robotic hand, representing human and artificial intelligence collaboration"
+                className="about-image"
+              />
+            </div>
 
-                  <div>
-                    <h4>{item.title}</h4>
-                    <p>{item.description}</p>
+            <div className="about-highlights">
+              {highlights.map((item) => {
+                const Icon = item.icon
+
+                return (
+                  <div className="highlight-card" key={item.title}>
+                    <div className="highlight-icon">
+                      <Icon size={23} />
+                    </div>
+
+                    <div>
+                      <h4>{item.title}</h4>
+                      <p>{item.description}</p>
+                    </div>
                   </div>
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
+
           </div>
-
         </div>
       </div>
     </section>

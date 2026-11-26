@@ -23,10 +23,7 @@ function Navbar() {
     <header className="navbar">
       <div className="container navbar-container">
 
-        <a href="#home" className="navbar-logo" onClick={closeMenu}>
-          <Code2 size={25} />
-          <span>KHALID<span className="logo-accent">.</span></span>
-        </a>
+        
 
         <nav className={`navbar-links ${menuOpen ? 'active' : ''}`}>
           {navLinks.map((link) => (
