@@ -1,5 +1,7 @@
+
 import { ArrowDown, Download, Code2 } from 'lucide-react'
 import { motion } from 'motion/react'
+import profileImage from '../assets/images/profile.jpg'
 
 export default function Hero() {
   return (
@@ -42,16 +44,21 @@ export default function Hero() {
             </a>
 
             <a
-  href="/images/resume.pdf"
-  download="Khalid-Swaleh-Breik-CV.pdf"
-  className="btn btn-outline"
->
-  Download CV <Download size={18} />
-</a>
+              href="/images/resume.pdf"
+              download="Khalid-Swaleh-Breik-CV.pdf"
+              className="btn btn-outline"
+            >
+              Download CV <Download size={18} />
+            </a>
           </div>
 
           <div className="hero-social">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
               <Code2 size={21} />
             </a>
           </div>
@@ -65,19 +72,15 @@ export default function Hero() {
         >
           <div className="hero-image-frame">
             <img
-              src="/src/assets/images/profile.jpg"
+              src={profileImage}
               alt="Khalid Swaleh Breik"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none'
-              }}
             />
+
             <div className="image-placeholder">
               <span>KS</span>
               <small>YOUR PROFILE PHOTO</small>
             </div>
           </div>
-
-          
         </motion.div>
 
       </div>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101A16" />
+
+  <title>You're Offline | Khalid Swaleh Breik</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: #101A16;
+      color: #F1EBDD;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 440px;
+    }
+
+    .icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      font-size: 28px;
+    }
+
+    p {
+      color: #A4B5A7;
+      line-height: 1.7;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 13px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #78A88A;
+      color: #101A16;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #91B99E;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="icon">📡</div>
+
+    <h1>You're currently offline</h1>
+
+    <p>
+      It looks like your internet connection is unavailable.
+      Please reconnect to the internet and try again.
+    </p>
+
+    <button onclick="window.location.reload()">
+      Try Again
+    </button>
+  </main>
+</body>
+</html>
